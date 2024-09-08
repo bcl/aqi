@@ -1,7 +1,6 @@
 package aqi
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -19,7 +18,7 @@ func TestPM2p5(t *testing.T) {
 	}
 
 	for i := range data {
-		t.Log(fmt.Sprintf("PM2.5 %0.1f ug/m3", data[i].in))
+		t.Logf("PM2.5 %0.1f ug/m3", data[i].in)
 		v, _, err := Lookup("PM2.5", data[i].in)
 		assert.Nil(t, err)
 		if err != nil {
@@ -41,7 +40,7 @@ func TestPM10(t *testing.T) {
 	}
 
 	for i := range data {
-		t.Log(fmt.Sprintf("PM10 %0.0f ug/m3", data[i].in))
+		t.Logf("PM10 %0.0f ug/m3", data[i].in)
 		v, _, err := Lookup("PM10", data[i].in)
 		assert.Nil(t, err)
 		if err != nil {
