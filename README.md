@@ -27,7 +27,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/bcl/aqi"
+	"brianlane.com/git/aqi"
 )
 
 func main() {
